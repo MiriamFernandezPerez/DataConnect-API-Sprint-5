@@ -7,17 +7,20 @@
     <title>Acudits</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <!-- estado del tiempo -->
+        <h3 class="p-3 m-3">Cloudy</h3>
     </header>
     <section>
         <!-- Chistes -->
-        <div class="container">
-            <h3 id="titleJoke">Ready to laugh?</h3>
-            <p id="textJoke"></p>
-            <button type="button" class="btn btn-primary" onclick="request()" >Next Joke</button>
+        <div class="container d-flex flex-column mt-4 mb-3 align-items-center border border-light shadow p-3 mb-5 bg-body rounded">
+            <h2 id="titleJoke" class="mb-3">Ready to laugh?<i class="em em-rolling_on_the_floor_laughing ms-3" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i></h2>
+            <p id="textJoke" class="joke mt-2 mb-3 fs-3 text-align-center p-5 align-items-center"></p>
+            <button type="button" class="btn btn-primary w-25 text-uppercase fs-5 fw-bold p-3 mb-3" onclick="request()" >Next Joke</button>
         </div>
     </section>
 
