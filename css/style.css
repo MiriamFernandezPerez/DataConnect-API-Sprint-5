@@ -25,3 +25,17 @@ body{
 .joke{
     min-height: 9rem;
 }
+
+.score{
+    visibility: hidden;
+}
+
+.emoji{
+    font-size: 2rem;
+}
+
+.emoji:hover{
+    transform: scale(1.20);
+    -webkit-transform: scale(1.20);
+    transition: .3s;
+}

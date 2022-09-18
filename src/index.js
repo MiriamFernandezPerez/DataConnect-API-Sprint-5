@@ -11,14 +11,28 @@ const options = {
     cache: 'default'  
 };
 
+let answerOK;
+
 function request(){
     fetch(ApiUrl, options)
     .then(result => result.json())
     .then(answer => {
-        const answerOK = answer.joke;
+        answerOK = answer.joke;
         console.log(answerOK);
         document.querySelector("#textJoke").innerHTML = answerOK;
     });
+    document.getElementById("score").style.visibility = "visible";
 }
 
+const reportJokes=[];
 
+function reportJoke(value){
+    let report = {
+        scoreJoke: value,
+        stringJoke: answerOK,
+        dateJoke: new Date().toISOString()
+    }
+    reportJokes.push(report);
+    console.log(reportJokes);
+    document.getElementById("score").style.visibility = "hidden";
+}

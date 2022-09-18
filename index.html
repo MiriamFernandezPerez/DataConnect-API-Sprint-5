@@ -19,8 +19,14 @@
         <!-- Chistes -->
         <div class="container d-flex flex-column mt-4 mb-3 align-items-center border border-light shadow p-3 mb-5 bg-body rounded">
             <h2 id="titleJoke" class="mb-3">Ready to laugh?<i class="em em-rolling_on_the_floor_laughing ms-3" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i></h2>
-            <p id="textJoke" class="joke mt-2 mb-3 fs-3 text-align-center p-5 align-items-center"></p>
-            <button type="button" class="btn btn-primary w-25 text-uppercase fs-5 fw-bold p-3 mb-3" onclick="request()" >Next Joke</button>
+            <p id="textJoke" class="joke mt-2 mb-2 fs-3 text-align-center p-5 align-items-center"></p>
+            
+            <div id="score" class="score container-fluid d-flex justify-content-center p-4 fs-5 mb-4">
+                <i class="em em-sweat mx-5 emoji" onclick="reportJoke(1)" aria-role="presentation" aria-label="FACE WITH COLD SWEAT"></i>
+                <i class="em em-neutral_face mx-5 emoji" onclick="reportJoke(2)" aria-role="presentation" aria-label="NEUTRAL FACE"></i>
+                <i class="em em-laughing mx-5 emoji" onclick="reportJoke(3)" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i>
+            </div>
+            <button type="button" class="btn btn-primary text-uppercase fs-5 fw-bold p-3 mb-3" onclick="request()" >Next Joke</button>
         </div>
     </section>
 
