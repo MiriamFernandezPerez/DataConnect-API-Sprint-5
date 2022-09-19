@@ -14,6 +14,17 @@ const options = {
 let answerOK;
 
 function request(){
+    let random = Math.random();
+    if (random<0.5){
+        showJokes1();
+        // console.log('random1');
+    }else{
+        showJokes2();
+        // console.log('random2');
+    }
+}
+
+function showJokes1(){
     fetch(ApiUrl, options)
     .then(result => result.json())
     .then(answer => {
@@ -59,3 +70,27 @@ fetch(weatherUrl, options2)
         document.querySelector("#weather").innerHTML = weatherStatus;
     })
 	.catch(err => console.error(err));
+
+//API CHISTES
+
+function showJokes2(){
+    const ApiUrl2 = 'https://webknox-jokes.p.rapidapi.com/jokes/random?minRating=8&maxLength=100';
+    const options3 = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '6c21a4a72dmshfad1c7af2660b8dp13f930jsn0f1ab4693026',
+            'X-RapidAPI-Host': 'webknox-jokes.p.rapidapi.com'
+        }
+    };
+
+    fetch(ApiUrl2, options3)
+        .then(response => response.json())
+        .then(response => {
+            answerOK = response.joke;
+            console.log(answerOK);
+            document.querySelector("#textJoke").innerHTML = answerOK;
+            console.log(response)
+        })
+        .catch(err => console.error(err));
+        document.getElementById("score").style.visibility = "visible";
+}
