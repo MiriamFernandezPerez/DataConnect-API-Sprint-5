@@ -4,22 +4,31 @@
     box-sizing: border-box;
 }
 
-header{
-    width: 100%;
-    height: 10rem;
-    border: 1px solid red;
+body{
+    overflow-x: hidden;
+    background-color: antiquewhite;
 }
 
-body{
-    background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('/img/jumping.webp');
-    background-position: 0rem 10rem;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+header{
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+h3{
+    font-size: 2rem;
 }
 
 .container{
-    width: 60%;
+    width: 30%;
+    z-index: 3;
+    margin-top: 11rem;
 }
 
 .joke{
@@ -38,4 +47,40 @@ body{
     transform: scale(1.20);
     -webkit-transform: scale(1.20);
     transition: .3s;
+}
+
+.fondo{
+    z-index: 2;
+}
+
+.svgLeft, .svgCenter, .svgRight{
+    /* transform: translate(25%, -50%); */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    /* position: relative; */
+    height: 100vh;
+    /* border: 1px solid red; */
+}
+
+
+.svgLeft{
+    background-image: url('/img/icon1.svg');
+    background-size: 20%;
+    top: 25%;
+    left: -35%;
+}
+
+.svgCenter{
+    background-image: url('/img/icon2.svg');
+    background-size: 75%;
+    top: 0%;
+    left: 0%;
+}
+
+.svgRight{
+    background-image: url('/img/icon3.svg');
+    background-size: 20%;
+    top: -40%;
+    left: 40%;
 }
