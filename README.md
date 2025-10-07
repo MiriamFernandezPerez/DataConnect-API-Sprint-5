@@ -30,19 +30,33 @@ En futuras versiones se espera incluir el código fuente, la arquitectura, la do
 Cuando el desarrollo avance, la estructura del proyecto podría verse así:
 
 📁 DataConnect-API/
+
 ├── 📂 src/
+
 │ ├── 📂 routes/
+
 │ ├── 📂 controllers/
+
 │ ├── 📂 services/
+
 │ └── 📂 models/
+
 ├── ⚙️ config/
+
 │ ├── 📄 default.json
+
 │ └── 📂 env/
+
 ├── 🧪 tests/
+
 ├── 🧾 .env.example
+
 ├── 📦 package.json
+
 ├── 📝 README.md
+
 └── 📘 swagger.yaml
+
 
 ---
 
@@ -114,5 +128,6 @@ Consulta el archivo `LICENSE` (cuando esté disponible) para más detalles.
 
 **Miriam Fernández Pérez**  
 📍 Proyecto académico del **Sprint 5**
+
 
 
